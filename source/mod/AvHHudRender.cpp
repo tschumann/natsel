@@ -2477,7 +2477,7 @@ void AvHHud::DrawBuildHealthEffectsForEntity(int inEntityIndex, float inAlpha)
 	{
 		if(theContinue && theLocalPlayer)
 		{
-			const kDrawEnemyBuildingDistance = 200;
+			const int kDrawEnemyBuildingDistance = 200;
 
 			// Draw effects if we are in top-down mode OR
 			if(	this->GetInTopDownMode() ||
