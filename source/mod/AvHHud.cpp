@@ -1143,8 +1143,8 @@ bool AvHHud::GetAndClearTopDownScrollAmount(int& outX, int& outY, int& outZ)
 	{
 		const int kScreenWidth = ScreenWidth();
 		const int kScreenHeight = ScreenHeight();
-		const kScrollHorizontal = .0152f*kScreenWidth;
-		const kScrollVertical = .015f*kScreenHeight;
+		const int kScrollHorizontal = .0152f*kScreenWidth;
+		const int kScrollVertical = .015f*kScreenHeight;
 
 		// Left side
 		if(this->GetIsMouseInRegion(0, 0, kScrollHorizontal, kScreenHeight) || (gScrollHandler.GetXScroll() < 0))

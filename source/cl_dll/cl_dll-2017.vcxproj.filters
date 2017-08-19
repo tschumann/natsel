@@ -1,0 +1,1053 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ccc79ccf-b10d-4f36-9642-49b64aeb8782}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Source Files\hl">
+      <UniqueIdentifier>{417a2ba8-9cb7-4f9d-81f2-958eb6965cef}</UniqueIdentifier>
+      <Extensions>*.CPP</Extensions>
+    </Filter>
+    <Filter Include="Source Files\client-side weapons">
+      <UniqueIdentifier>{fc8a0fef-4d95-4495-95ac-fe58e58a0273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{301d942d-d420-4fe7-a8ad-66fec28ba831}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{1680da00-994c-4628-a8b9-8d11e3f4479d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mod">
+      <UniqueIdentifier>{80c11b1e-325b-4619-87c8-4fb6936c4db7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mod\particles">
+      <UniqueIdentifier>{e6e22c8a-ed57-4dd5-b836-00e83dfd494c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{3a55b677-3853-4004-be92-8301b93166cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="textrep">
+      <UniqueIdentifier>{c6ec95e5-d4d1-4bdd-b8d1-73684b2dfa36}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ammo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ammo_secondary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ammohistory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="battery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cdll_int.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="com_weapons.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="death.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="demo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ev_common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="events.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="flashlight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStudioModelRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="geiger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="health.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hud.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hud_msg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hud_redraw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hud_servers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hud_spectator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hud_update.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="in_camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="inputw32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="message.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="overview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parsemsg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pm_shared\pm_debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pm_shared\pm_math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pm_shared\pm_shared.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="saytext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="status_icons.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="statusbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="studio_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StudioModelRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="text_message.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="train.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tri.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\vgui_checkbutton2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgui_ClassMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgui_ConsolePanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgui_ControlConfigPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgui_CustomObjects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\vgui_grid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\vgui_helpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgui_int.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\vgui_listbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\vgui_loadtga.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgui_MOTDWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgui_SchemeManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgui_ScorePanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\vgui_scrollbar2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgui_ServerBrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\vgui_slider2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgui_SpectatorPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgui_TeamFortressViewport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgui_teammenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\voice_banmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\voice_status.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\voice_vgui_tweakdlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cl_util.cpp">
+      <Filter>Source Files\hl</Filter>
+    </ClCompile>
+    <ClCompile Include="ev_hldm.cpp">
+      <Filter>Source Files\hl</Filter>
+    </ClCompile>
+    <ClCompile Include="hl\hl_baseentity.cpp">
+      <Filter>Source Files\hl</Filter>
+    </ClCompile>
+    <ClCompile Include="hl\hl_objects.cpp">
+      <Filter>Source Files\hl</Filter>
+    </ClCompile>
+    <ClCompile Include="hl\hl_weapons.cpp">
+      <Filter>Source Files\hl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dlls\hl_wpn_glock.cpp">
+      <Filter>Source Files\hl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHAcidRocketGun.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHAlienAbilities.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHBasePlayerWeapon.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHBileBombGun.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHBite.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHBite2.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHBlink.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHClaws.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHDevour.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHDivineWind.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHGrenade.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHGrenadeGun.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHHealingSpray.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHHeavyMachineGun.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHItemInfo.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHKnife.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMachineGun.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMarineWeapon.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMetabolize.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMine.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHParasiteGun.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHPistol.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHPrimalScream.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSonicGun.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSpikeGun.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSpitGun.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSpores.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHStomp.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSwipe.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHUmbraGun.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHWebSpinner.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHWelder.cpp">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\bitmappng.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\ChatPanel.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\ColoredPanel.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\DummyPanel.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\FadingImageLabel.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\loadpng.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\MarqueeComponent.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\MemoryInputStream.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\PieMenu.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\PieNode.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\ScoreboardIcon.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\SliderPlus.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\SpritePanel.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIComponent.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIComponents.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIFactory.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIHud.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIManager.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIPieMenu.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIUtil.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AnimationUtil.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHActionButtons.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHAlienWeapon.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHAmbientSound.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHAssert.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHBaseInfoLocation.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHClientUtil.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHCommanderModeHandler.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHConstants.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHEntityHierarchy.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHEvents.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHFont.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHHelp.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHHud.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHHudRender.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHLogoutComponent.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMapExtents.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMinimap.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMovementUtil.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHNetworkMessages.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHNexusClient.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHNexusTunnelToServer.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHOrder.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHOverviewControl.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHOverviewMap.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHParticleEditorHandler.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHPieMenuHandler.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHPlayerUpgrade.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHScriptClient.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHScriptManager.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHScriptShared.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHScrollHandler.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHScrollPanel.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSharedMovementInfo.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSharedUtil.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSpecials.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSpriteAPI.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHTeamHierarchy.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHTechImpulsePanel.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHTechNode.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHTechSlotManager.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHTechTree.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHTooltip.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHUIFactory.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHVisibleBlipList.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\CollisionChecker.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\CollisionUtil.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\InvisiblePanel.cpp">
+      <Filter>mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHParticleSystem.cpp">
+      <Filter>mod\particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHParticleSystemManager.cpp">
+      <Filter>mod\particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHParticleTemplate.cpp">
+      <Filter>mod\particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHParticleTemplateClient.cpp">
+      <Filter>mod\particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSelectionHelper.cpp">
+      <Filter>mod\particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\Balance.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\Checksum.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\GammaTable.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\LinuxSupport.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\Mat3.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\MathUtil.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\Quat.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\Stacktrace.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\STLUtil.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\Tokenizer.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\Zassert.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\ZassertTemplate.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\textrep\TRDescription.cpp">
+      <Filter>textrep</Filter>
+    </ClCompile>
+    <ClCompile Include="..\textrep\TRFactory.cpp">
+      <Filter>textrep</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\mod\AvHAlienAbilities.h">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHAlienWeaponConstants.h">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHAlienWeapons.h">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHBasePlayerWeaponConstants.h">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHMarineWeapon.h">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHMarineWeaponConstants.h">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHMarineWeapons.h">
+      <Filter>Source Files\client-side weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="ammo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ammohistory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\bitvec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chud.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chudmisc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cl_dll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="com_weapons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="demo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ev_hldm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eventscripts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStudioModelRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="health.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hud.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hud_iface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hud_servers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hud_servers_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hud_spectator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="in_defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\itrackeruser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kbutton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="overview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="parsemsg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pm_shared\pm_debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pm_shared\pm_defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pm_shared\pm_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pm_shared\pm_materials.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pm_shared\pm_movevars.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pm_shared\pm_shared.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="studio_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StudioModelRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\upp\UPPClientInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\upp\UPPCommonInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\upp\UPPTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="util_vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\vgui_checkbutton2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vgui_ConsolePanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vgui_ControlConfigPanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\vgui_defaultinputsignal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\vgui_grid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\vgui_helpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vgui_int.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\vgui_listbox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\vgui_loadtga.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vgui_SchemeManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vgui_ScorePanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\vgui_scrollbar2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vgui_ServerBrowser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\vgui_slider2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vgui_TeamFortressViewport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\voice_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\voice_status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\voice_vgui_tweakdlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wrect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\bitmappng.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\ChatPanel.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\ColoredPanel.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\FadingImageLabel.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\loadpng.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\MarqueeComponent.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\MemoryInputStream.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\PieMenu.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\PieNode.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\ReloadableComponent.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\ScoreboardIcon.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\SliderPlus.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\SpritePanel.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\StaticLabel.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\UIComponent.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\UIComponents.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\UIFactory.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\UIHud.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\UIManager.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\UIPieMenu.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\UIUtil.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AnimationUtil.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHActionButtons.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHAlienWeapon.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHAmbientSound.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHBaseInfoLocation.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHClientUtil.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHCommanderModeHandler.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHConstants.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHEntityHierarchy.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHFont.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHHud.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHHudConstants.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHLogoutComponent.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHMapExtents.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHMinimap.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHMovementUtil.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHNetworkMessages.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHNexusClient.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHNexusTunnelToServer.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHOrder.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHOverviewControl.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHOverviewMap.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHParticleEditorHandler.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHPieMenuHandler.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHPlayerUpgrade.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHScriptManager.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHScrollHandler.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHSharedMovementInfo.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHSharedUtil.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHSpecials.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHSpriteAPI.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHTeamHierarchy.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHTechImpulsePanel.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHTechNode.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHTechTree.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHTitles.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHTooltip.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHUIFactory.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHVisibleBlipList.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\CollisionChecker.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\CollisionUtil.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\InvisiblePanel.h">
+      <Filter>mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHParticleSystem.h">
+      <Filter>mod\particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHParticleSystemManager.h">
+      <Filter>mod\particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHParticleTemplate.h">
+      <Filter>mod\particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHParticleTemplateClient.h">
+      <Filter>mod\particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mod\AvHSelectionHelper.h">
+      <Filter>mod\particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\Balance.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\Checksum.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\CString.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\GammaTable.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\LinuxSupport.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\Mat3.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\MathUtil.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\nowarnings.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\Quat.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\Stacktrace.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\STLUtil.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\StringVector.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\Tokenizer.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\util\Zassert.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\textrep\TRDescription.h">
+      <Filter>textrep</Filter>
+    </ClInclude>
+    <ClInclude Include="..\textrep\TRFactory.h">
+      <Filter>textrep</Filter>
+    </ClInclude>
+    <ClInclude Include="..\textrep\TRTag.h">
+      <Filter>textrep</Filter>
+    </ClInclude>
+    <ClInclude Include="..\textrep\TRTagValuePair.h">
+      <Filter>textrep</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

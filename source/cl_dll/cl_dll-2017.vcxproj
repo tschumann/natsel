@@ -1,0 +1,1470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Developer - debug|Win32">
+      <Configuration>Developer - debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Developer - release|Win32">
+      <Configuration>Developer - release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Playtest - balance disabled|Win32">
+      <Configuration>Playtest - balance disabled</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Playtest|Win32">
+      <Configuration>Playtest</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>cl_dll.dll</ProjectName>
+    <ProjectGuid>{4F2D8BCB-E519-4BD6-9E90-F9BD279A7F81}</ProjectGuid>
+    <RootNamespace>cl_dll</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.26323.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean>$(TargetPath)%3b*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat</ExtensionsToDeleteOnClean>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean>$(TargetPath)%3b*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat</ExtensionsToDeleteOnClean>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean>$(TargetPath)%3b*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat</ExtensionsToDeleteOnClean>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean>$(TargetPath)%3b*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat</ExtensionsToDeleteOnClean>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/cl_dll.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);..\inlcude\stlport;..\include\vgui;..\include\nexus;..\include\libpng;..\include\fmod;..\include\lua;..\particle;..\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT;USE_OLDAUTH;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile />
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ws2_32.lib;particles.lib;vgui.lib;liblua.lib;liblualib.lib;libpng.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)..\cl_dlls\client.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>U:\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(SolutionDir)..\cl_dlls\client.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(SolutionDir)..\cl_dlls\client.map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>false</OptimizeReferences>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <BaseAddress />
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(IntDir)cl_dll.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/cl_dll.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir);U:\inlcude\stlport;U:\include\vgui;U:\include\nexus;U:\include\libpng;U:\include\fmod;U:\include\lua;U:\include\particle;U:\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;AVH_CLIENT;USE_OLDAUTH</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile />
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat />
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ws2_32.lib;particles.lib;vgui.lib;liblua.lib;liblualib.lib;libpng.lib;zlib.lib;libcurl.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)..\cl_dlls\client.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>U:\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile />
+      <MapFileName />
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(IntDir)cl_dll.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/cl_dll.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir);..\include\stlport;..\include\vgui;..\include\nexus;..\include\libpng;..\include\fmod;..\include\lua;..\particle;..\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;AVH_CLIENT;AVH_PLAYTEST_BUILD;BALANCE_ENABLED;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile />
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat />
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ws2_32.lib;particles.lib;vgui.lib;liblua.lib;liblualib.lib;libpng.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)..\cl_dlls\client.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>U:\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile />
+      <MapFileName />
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(IntDir)cl_dll.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/cl_dll.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir);U:\inlcude\stlport;U:\include\vgui;U:\include\nexus;U:\include\libpng;U:\include\fmod;U:\include\lua;U:\include\particle;U:\include\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;AVH_CLIENT;AVH_PLAYTEST_BUILD</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile />
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat />
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ws2_32.lib;particles.lib;vgui.lib;liblua.lib;liblualib.lib;libpng.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)..\cl_dlls\client.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>U:\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile />
+      <MapFileName />
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(IntDir)cl_dll.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\interface.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\dlls\hl_wpn_glock.cpp" />
+    <ClCompile Include="..\game_shared\vgui_checkbutton2.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\vgui_grid.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\vgui_helpers.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\vgui_listbox.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\vgui_loadtga.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\vgui_scrollbar2.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\vgui_slider2.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\voice_banmgr.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\voice_status.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\voice_vgui_tweakdlg.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AnimationUtil.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHAcidRocketGun.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHActionButtons.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHAlienAbilities.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHAlienWeapon.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHAmbientSound.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHAssert.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHBaseInfoLocation.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHBasePlayerWeapon.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHBileBombGun.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHBite.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHBite2.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHBlink.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHClaws.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHClientUtil.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHCommanderModeHandler.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHConstants.cpp" />
+    <ClCompile Include="..\mod\AvHDevour.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHDivineWind.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHEntityHierarchy.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHEvents.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHFont.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHGrenade.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHGrenadeGun.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHHealingSpray.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHHeavyMachineGun.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHHelp.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHHud.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHHudRender.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHItemInfo.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHKnife.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHLogoutComponent.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMachineGun.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMapExtents.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMarineWeapon.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMetabolize.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMine.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMinimap.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHMovementUtil.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHNetworkMessages.cpp" />
+    <ClCompile Include="..\mod\AvHNexusClient.cpp" />
+    <ClCompile Include="..\mod\AvHNexusTunnelToServer.cpp" />
+    <ClCompile Include="..\mod\AvHOrder.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHOverviewControl.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHOverviewMap.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHParasiteGun.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHParticleEditorHandler.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHParticleSystem.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHParticleSystemManager.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHParticleTemplate.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHParticleTemplateClient.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHPieMenuHandler.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHPistol.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHPlayerUpgrade.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHPrimalScream.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHScriptClient.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHScriptManager.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHScriptShared.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHScrollHandler.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHScrollPanel.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSelectionHelper.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSharedMovementInfo.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSharedUtil.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSonicGun.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSpecials.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSpikeGun.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSpitGun.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSpores.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSpriteAPI.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHStomp.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHSwipe.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHTeamHierarchy.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHTechImpulsePanel.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHTechNode.cpp" />
+    <ClCompile Include="..\mod\AvHTechSlotManager.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHTechTree.cpp" />
+    <ClCompile Include="..\mod\AvHTooltip.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHUIFactory.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHUmbraGun.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHVisibleBlipList.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHWebSpinner.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\AvHWelder.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\mod\CollisionChecker.cpp" />
+    <ClCompile Include="..\mod\CollisionUtil.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\pm_shared\pm_debug.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\pm_shared\pm_math.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\pm_shared\pm_shared.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\textrep\TRDescription.cpp" />
+    <ClCompile Include="..\textrep\TRFactory.cpp" />
+    <ClCompile Include="..\ui\bitmappng.cpp" />
+    <ClCompile Include="..\ui\ChatPanel.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\ui\ColoredPanel.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\DummyPanel.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\FadingImageLabel.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\InvisiblePanel.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\loadpng.cpp" />
+    <ClCompile Include="..\ui\MarqueeComponent.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\MemoryInputStream.cpp" />
+    <ClCompile Include="..\ui\PieMenu.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\PieNode.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\ScoreboardIcon.cpp" />
+    <ClCompile Include="..\ui\SliderPlus.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\SpritePanel.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIComponent.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIComponents.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIFactory.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIHud.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIManager.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIPieMenu.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\ui\UIUtil.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">_DEBUG;_MBCS;DEBUG;WIN32;_WINDOWS;AVH_CLIENT</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\util\Balance.cpp" />
+    <ClCompile Include="..\util\Checksum.cpp" />
+    <ClCompile Include="..\util\GammaTable.cpp" />
+    <ClCompile Include="..\util\LinuxSupport.cpp" />
+    <ClCompile Include="..\util\Mat3.cpp" />
+    <ClCompile Include="..\util\MathUtil.cpp" />
+    <ClCompile Include="..\util\Quat.cpp" />
+    <ClCompile Include="..\util\Stacktrace.cpp" />
+    <ClCompile Include="..\util\STLUtil.cpp" />
+    <ClCompile Include="..\util\Tokenizer.cpp" />
+    <ClCompile Include="..\util\Zassert.cpp" />
+    <ClCompile Include="..\util\ZassertTemplate.cpp" />
+    <ClCompile Include="ammo.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="ammohistory.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="ammo_secondary.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="battery.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="cdll_int.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="cl_util.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="com_weapons.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="death.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="demo.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="events.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="ev_common.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="ev_hldm.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="flashlight.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="GameStudioModelRenderer.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="geiger.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="health.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="hl\hl_baseentity.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="hl\hl_objects.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="hl\hl_weapons.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="hud.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="hud_msg.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="hud_redraw.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="hud_servers.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="hud_spectator.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="hud_update.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="inputw32.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="in_camera.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="message.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="overview.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">true</ExcludedFromBuild>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">true</ExcludedFromBuild>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">true</ExcludedFromBuild>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">true</ExcludedFromBuild>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="parsemsg.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="saytext.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="statusbar.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="status_icons.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="StudioModelRenderer.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="studio_util.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="text_message.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="train.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="tri.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="util.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="vgui_ClassMenu.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="vgui_ConsolePanel.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="vgui_ControlConfigPanel.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="vgui_CustomObjects.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="vgui_int.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="vgui_MOTDWindow.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="vgui_SchemeManager.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="vgui_ScorePanel.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="vgui_ServerBrowser.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="vgui_SpectatorPanel.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="vgui_TeamFortressViewport.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="vgui_teammenu.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="view.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Developer - release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest - balance disabled|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Playtest|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\itrackeruser.h" />
+    <ClInclude Include="..\game_shared\bitvec.h" />
+    <ClInclude Include="..\game_shared\vgui_checkbutton2.h" />
+    <ClInclude Include="..\game_shared\vgui_defaultinputsignal.h" />
+    <ClInclude Include="..\game_shared\vgui_grid.h" />
+    <ClInclude Include="..\game_shared\vgui_helpers.h" />
+    <ClInclude Include="..\game_shared\vgui_listbox.h" />
+    <ClInclude Include="..\game_shared\vgui_loadtga.h" />
+    <ClInclude Include="..\game_shared\vgui_scrollbar2.h" />
+    <ClInclude Include="..\game_shared\vgui_slider2.h" />
+    <ClInclude Include="..\game_shared\voice_common.h" />
+    <ClInclude Include="..\game_shared\voice_status.h" />
+    <ClInclude Include="..\game_shared\voice_vgui_tweakdlg.h" />
+    <ClInclude Include="..\mod\AnimationUtil.h" />
+    <ClInclude Include="..\mod\AvHActionButtons.h" />
+    <ClInclude Include="..\mod\AvHAlienAbilities.h" />
+    <ClInclude Include="..\mod\AvHAlienWeapon.h" />
+    <ClInclude Include="..\mod\AvHAlienWeaponConstants.h" />
+    <ClInclude Include="..\mod\AvHAlienWeapons.h" />
+    <ClInclude Include="..\mod\AvHAmbientSound.h" />
+    <ClInclude Include="..\mod\AvHBaseInfoLocation.h" />
+    <ClInclude Include="..\mod\AvHBasePlayerWeaponConstants.h" />
+    <ClInclude Include="..\mod\AvHClientUtil.h" />
+    <ClInclude Include="..\mod\AvHCommanderModeHandler.h" />
+    <ClInclude Include="..\mod\AvHConstants.h" />
+    <ClInclude Include="..\mod\AvHEntityHierarchy.h" />
+    <ClInclude Include="..\mod\AvHFont.h" />
+    <ClInclude Include="..\mod\AvHHud.h" />
+    <ClInclude Include="..\mod\AvHHudConstants.h" />
+    <ClInclude Include="..\mod\AvHLogoutComponent.h" />
+    <ClInclude Include="..\mod\AvHMapExtents.h" />
+    <ClInclude Include="..\mod\AvHMarineWeapon.h" />
+    <ClInclude Include="..\mod\AvHMarineWeaponConstants.h" />
+    <ClInclude Include="..\mod\AvHMarineWeapons.h" />
+    <ClInclude Include="..\mod\AvHMinimap.h" />
+    <ClInclude Include="..\mod\AvHMovementUtil.h" />
+    <ClInclude Include="..\mod\AvHNetworkMessages.h" />
+    <ClInclude Include="..\mod\AvHNexusClient.h" />
+    <ClInclude Include="..\mod\AvHNexusTunnelToServer.h" />
+    <ClInclude Include="..\mod\AvHOrder.h" />
+    <ClInclude Include="..\mod\AvHOverviewControl.h" />
+    <ClInclude Include="..\mod\AvHOverviewMap.h" />
+    <ClInclude Include="..\mod\AvHParticleEditorHandler.h" />
+    <ClInclude Include="..\mod\AvHParticleSystem.h" />
+    <ClInclude Include="..\mod\AvHParticleSystemManager.h" />
+    <ClInclude Include="..\mod\AvHParticleTemplate.h" />
+    <ClInclude Include="..\mod\AvHParticleTemplateClient.h" />
+    <ClInclude Include="..\mod\AvHPieMenuHandler.h" />
+    <ClInclude Include="..\mod\AvHPlayerUpgrade.h" />
+    <ClInclude Include="..\mod\AvHScriptManager.h" />
+    <ClInclude Include="..\mod\AvHScrollHandler.h" />
+    <ClInclude Include="..\mod\AvHSelectionHelper.h" />
+    <ClInclude Include="..\mod\AvHSharedMovementInfo.h" />
+    <ClInclude Include="..\mod\AvHSharedUtil.h" />
+    <ClInclude Include="..\mod\AvHSpecials.h" />
+    <ClInclude Include="..\mod\AvHSpriteAPI.h" />
+    <ClInclude Include="..\mod\AvHTeamHierarchy.h" />
+    <ClInclude Include="..\mod\AvHTechImpulsePanel.h" />
+    <ClInclude Include="..\mod\AvHTechNode.h" />
+    <ClInclude Include="..\mod\AvHTechTree.h" />
+    <ClInclude Include="..\mod\AvHTitles.h" />
+    <ClInclude Include="..\mod\AvHTooltip.h" />
+    <ClInclude Include="..\mod\AvHUIFactory.h" />
+    <ClInclude Include="..\mod\AvHVisibleBlipList.h" />
+    <ClInclude Include="..\mod\CollisionChecker.h" />
+    <ClInclude Include="..\mod\CollisionUtil.h" />
+    <ClInclude Include="..\pm_shared\pm_debug.h" />
+    <ClInclude Include="..\pm_shared\pm_defs.h" />
+    <ClInclude Include="..\pm_shared\pm_info.h" />
+    <ClInclude Include="..\pm_shared\pm_materials.h" />
+    <ClInclude Include="..\pm_shared\pm_movevars.h" />
+    <ClInclude Include="..\pm_shared\pm_shared.h" />
+    <ClInclude Include="..\textrep\TRDescription.h" />
+    <ClInclude Include="..\textrep\TRFactory.h" />
+    <ClInclude Include="..\textrep\TRTag.h" />
+    <ClInclude Include="..\textrep\TRTagValuePair.h" />
+    <ClInclude Include="..\ui\bitmappng.h" />
+    <ClInclude Include="..\ui\ChatPanel.h" />
+    <ClInclude Include="..\ui\ColoredPanel.h" />
+    <ClInclude Include="..\ui\FadingImageLabel.h" />
+    <ClInclude Include="..\ui\InvisiblePanel.h" />
+    <ClInclude Include="..\ui\loadpng.h" />
+    <ClInclude Include="..\ui\MarqueeComponent.h" />
+    <ClInclude Include="..\ui\MemoryInputStream.h" />
+    <ClInclude Include="..\ui\PieMenu.h" />
+    <ClInclude Include="..\ui\PieNode.h" />
+    <ClInclude Include="..\ui\ReloadableComponent.h" />
+    <ClInclude Include="..\ui\ScoreboardIcon.h" />
+    <ClInclude Include="..\ui\SliderPlus.h" />
+    <ClInclude Include="..\ui\SpritePanel.h" />
+    <ClInclude Include="..\ui\StaticLabel.h" />
+    <ClInclude Include="..\ui\UIComponent.h" />
+    <ClInclude Include="..\ui\UIComponents.h" />
+    <ClInclude Include="..\ui\UIFactory.h" />
+    <ClInclude Include="..\ui\UIHud.h" />
+    <ClInclude Include="..\ui\UIManager.h" />
+    <ClInclude Include="..\ui\UIPieMenu.h" />
+    <ClInclude Include="..\ui\UIUtil.h" />
+    <ClInclude Include="..\upp\UPPClientInterface.h" />
+    <ClInclude Include="..\upp\UPPCommonInterface.h" />
+    <ClInclude Include="..\upp\UPPTypes.h" />
+    <ClInclude Include="..\util\Balance.h" />
+    <ClInclude Include="..\util\Checksum.h" />
+    <ClInclude Include="..\util\CString.h" />
+    <ClInclude Include="..\util\GammaTable.h" />
+    <ClInclude Include="..\util\LinuxSupport.h" />
+    <ClInclude Include="..\util\Mat3.h" />
+    <ClInclude Include="..\util\MathUtil.h" />
+    <ClInclude Include="..\util\nowarnings.h" />
+    <ClInclude Include="..\util\Quat.h" />
+    <ClInclude Include="..\util\Stacktrace.h" />
+    <ClInclude Include="..\util\STLUtil.h" />
+    <ClInclude Include="..\util\StringVector.h" />
+    <ClInclude Include="..\util\Tokenizer.h" />
+    <ClInclude Include="..\util\Zassert.h" />
+    <ClInclude Include="ammo.h" />
+    <ClInclude Include="ammohistory.h" />
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="chud.h" />
+    <ClInclude Include="chudmisc.h" />
+    <ClInclude Include="cl_dll.h" />
+    <ClInclude Include="com_weapons.h" />
+    <ClInclude Include="demo.h" />
+    <ClInclude Include="eventscripts.h" />
+    <ClInclude Include="ev_hldm.h" />
+    <ClInclude Include="GameStudioModelRenderer.h" />
+    <ClInclude Include="health.h" />
+    <ClInclude Include="hud.h" />
+    <ClInclude Include="hud_iface.h" />
+    <ClInclude Include="hud_servers.h" />
+    <ClInclude Include="hud_servers_priv.h" />
+    <ClInclude Include="hud_spectator.h" />
+    <ClInclude Include="in_defs.h" />
+    <ClInclude Include="kbutton.h" />
+    <ClInclude Include="overview.h" />
+    <ClInclude Include="parsemsg.h" />
+    <ClInclude Include="StudioModelRenderer.h" />
+    <ClInclude Include="studio_util.h" />
+    <ClInclude Include="util.h" />
+    <ClInclude Include="util_vector.h" />
+    <ClInclude Include="vgui_ConsolePanel.h" />
+    <ClInclude Include="vgui_ControlConfigPanel.h" />
+    <ClInclude Include="vgui_int.h" />
+    <ClInclude Include="vgui_SchemeManager.h" />
+    <ClInclude Include="vgui_ScorePanel.h" />
+    <ClInclude Include="vgui_ServerBrowser.h" />
+    <ClInclude Include="vgui_TeamFortressViewport.h" />
+    <ClInclude Include="view.h" />
+    <ClInclude Include="wrect.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
