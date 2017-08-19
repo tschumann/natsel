@@ -43,7 +43,7 @@ CFLAGS=$(BASE_CFLAGS) -w -Wall -nostdinc++ -fpermissive -ffor-scope -fPIC -mtune
 
 # add base directory (CGC)
 
-INCLUDEDIRS=-I$(LIBBASE) -I. -I$(LIBBASE)/include -I$(LIBBASE)/include/stlport -I$(LIBBASE)/particle -I$(LIBBASE)/include/lua -I../dlls -I../engine -I../common -I../mod -I../game_shared -I../pm_shared -I.. -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9 -I/usr/include/c++
+INCLUDEDIRS=-I$(LIBBASE) -I. -I$(LIBBASE)/include -I$(LIBBASE)/particle -I$(LIBBASE)/include/lua -I../dlls -I../engine -I../common -I../mod -I../game_shared -I../pm_shared -I.. -I/usr/include/x86_64-linux-gnu/c++/6 -I/usr/include/c++/6 -I/usr/include/c++
 LINKDIRS=  -L$(LIBBASE)/particle
 
 SHLIBEXT=so
