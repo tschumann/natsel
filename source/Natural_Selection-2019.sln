@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\Balance.txt = ..\Balance.txt
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cl_dll.dll", "cl_dll\cl_dll-2017.vcxproj", "{4F2D8BCB-E519-4BD6-9E90-F9BD279A7F81}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cl_dll.dll", "cl_dll\cl_dll-2019.vcxproj", "{4F2D8BCB-E519-4BD6-9E90-F9BD279A7F81}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ns.dll", "dlls\hl-2017.vcxproj", "{FE9B1F1B-866D-4A5A-A303-FAEE34F90025}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ns.dll", "dlls\hl-2019.vcxproj", "{FE9B1F1B-866D-4A5A-A303-FAEE34F90025}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
